@@ -1,8 +1,10 @@
-Do DHCP to provide and assigns IP addresses
+**Do DHCP to provide and assigns IP addresses**
 
+```
 ip dhcp excluded-address 10.0.20.1
 ip dhcp excluded-address 10.1.20.1
 ip dhcp excluded-address 10.2.20.1
+```
 
 ip dhcp pool V10
  network 10.0.20.0 255.255.255.0
