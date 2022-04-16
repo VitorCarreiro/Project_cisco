@@ -1,10 +1,10 @@
 **Do DHCP to provide and assigns IP addresses**
 
-```
+
 ip dhcp excluded-address 10.0.20.1
 ip dhcp excluded-address 10.1.20.1
 ip dhcp excluded-address 10.2.20.1
-```
+
 
 ip dhcp pool V10
  network 10.0.20.0 255.255.255.0
@@ -118,6 +118,8 @@ ip nat inside source list 1 interface Serial0/0/0 overload
 access-list 1 permit 10.0.0.0 0.255.255.255
 access-list 1 permit 172.16.0.0 0.15.255.255
 access-list 1 permit 192.168.0.0 0.0.255.255
+
+Use OSPF to distribute IP routing
 
 router ospf 100
  passive-interface g0/0
