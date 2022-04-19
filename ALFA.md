@@ -38,7 +38,7 @@ ephone-dn 2
  **For VPN**
  ```
  interface Tunnel100
- ip address 192.168.20.6 255.255.255.252
+ ip address 192.168.20.2 255.255.255.252
  tunnel source Serial0/1/1
  tunnel destination 1.20.0.1
  
