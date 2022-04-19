@@ -75,9 +75,9 @@ group 5
 
 crypto map UMAPA 10 ipsec-isakmp
 set peer 2.20.0.2
-match address 100
+match address 101
 
-access-list 100 permit gre host 2.20.0.1 host 2.20.0.2
+access-list 101 permit gre host 2.20.0.1 host 2.20.0.2
 
 int s0/0/1
 crypto map UMAPA
