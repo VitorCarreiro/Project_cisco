@@ -1,5 +1,12 @@
 **SW7**
 ```
+
+int f0/3
+sw mo trunk
+
+int f0/4
+swmo trunk
+
 int f0/15
 sw mo tr
 
@@ -11,6 +18,7 @@ channel-group 1 mode active
 vtp domain enta.pt
 vtp mode server
 vtp password Passw0rd
+
 
 vlan 10
 name V10
