@@ -5,7 +5,7 @@ int f0/3
 sw mo trunk
 
 int f0/4
-swmo trunk
+sw mo trunk
 
 int f0/15
 sw mo tr
