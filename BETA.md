@@ -1,4 +1,5 @@
 **Interfaces**
+```
 interface Serial0/1/1
  ip address 2.20.0.2 255.255.255.252
  ip nat outside
@@ -6,6 +7,7 @@ interface Serial0/1/1
 interface GigabitEthernet0/0
  ip address 172.16.20.2 255.255.255.0
  ip nat inside
+```
 
 **NAT overload and ACL**
 
