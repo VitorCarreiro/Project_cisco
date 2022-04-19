@@ -1,9 +1,9 @@
 **Interfaces**
 ```
-interface Serial0/0/0
- no shut
- ip address 1.20.0.1 255.255.255.252
- ip nat out
+interface f0/0
+no shut
+ip address 172.16.20.3 255.255.255.0
+ip nat in
  
 interface Serial0/0/1
  no shut
@@ -37,10 +37,10 @@ ephone-dn 2
  ```
  **For VPN**
  ```
- interface Tunnel101
+ interface Tunnel100
  ip address 192.168.20.6 255.255.255.252
  tunnel source Serial0/1/1
- tunnel destination 2.20.0.1
+ tunnel destination 1.20.0.1
  
  crypto map OMAPA 10 ipsec-isakmp 
 set peer 1.20.0.1
