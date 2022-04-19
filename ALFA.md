@@ -1,4 +1,17 @@
-**NAT and ACL**
+**Interfaces**
+```
+interface Serial0/0/0
+ no shut
+ ip address 1.20.0.1 255.255.255.252
+ ip nat out
+ 
+interface Serial0/0/1
+ no shut
+ ip address 2.20.0.1 255.255.255.252
+ ip nat out
+ ```
+
+**NAT overload and ACL**
 ```
 ip nat inside source list 1 interface Serial0/0/0 overload
 
@@ -7,20 +20,8 @@ access-list 1 permit 172.16.0.0 0.15.255.255
 access-list 1 permit 192.168.0.0 0.0.255.255
 ```
 
-**DHCP**
-```
-ip dhcp excluded-address 172.16.20.1
-ip dhcp excluded-address 172.16.20.253
-ip dhcp excluded-address 172.18.20.253
-ip dhcp excluded-address 172.18.20.1
-
-ip dhcp pool inside
- network 172.18.20.0 255.255.255.0
- default-router 172.18.20.253
- option 150 ip 172.18.0.1
- dns-server 8.8.8.8
- ```
  **Telephony Service**
+ 
  ```
  telephony-service
  max-ephones 10
@@ -36,6 +37,11 @@ ephone-dn 2
  ```
  **For VPN**
  ```
+ interface Tunnel101
+ ip address 192.168.20.6 255.255.255.252
+ tunnel source Serial0/1/1
+ tunnel destination 2.20.0.1
+ 
  crypto map OMAPA 10 ipsec-isakmp 
 set peer 1.20.0.1
 match address 100
