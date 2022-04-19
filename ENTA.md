@@ -3,10 +3,12 @@
 **Interfaces**
 ```
 interface Serial0/0/0
+ no shut
  ip address 1.20.0.1 255.255.255.252
  ip nat out
  
 interface Serial0/0/1
+ no shut
  ip address 2.20.0.1 255.255.255.252
  ip nat out
  ```
