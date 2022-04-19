@@ -37,14 +37,13 @@ router eigrp 100
  network 172.16.20.0 0.0.0.255
  network 172.17.20.0 0.0.0.255
  network 172.18.20.0 0.0.0.255
- network 172.19.20.0 0.0.0.255
-!
+
 router ospf 100
  redistribute eigrp 100 subnets 
  network 192.168.20.0 0.0.0.3 area 0
  network 172.16.20.0 0.0.0.255 area 0
  network 172.18.20.0 0.0.0.255 area 0
  network 172.17.20.0 0.0.0.255 area 0
- network 172.19.20.0 0.0.0.255 area 0
+ 
  ```
  
